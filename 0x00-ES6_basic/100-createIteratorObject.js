@@ -1,12 +1,9 @@
-export default function createReportObject(employeesList) {
-  const reportObject = {
-    allEmployees: {
-      ...employeesList,
-    },
-    getNumberOfDepartments() {
-      return Object.keys(employeesList).length;
-    },
-  };
+export default function* createIteratorObject(report) {
+  const departments = Object.values(report.allEmployees);
 
-  return reportObject;
+  for (const department of departments) {
+    for (const employee of department) {
+      yield employee;
+    }
+  }
 }

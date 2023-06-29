@@ -1,5 +1,6 @@
-function getResponseFromAPI()
-	return new promise((resolve, reject) => {
+function getResponseFromAPI() {
+	return new Promise((resolve, reject) => {
     const response = true;
     resolve (response);
     });
+}
